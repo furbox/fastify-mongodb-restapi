@@ -1,12 +1,12 @@
-const Product = require('../models/product.model');
+const Product = require("../models/product.model");
 
 const routes = [
   {
     url: "/products",
     method: "GET",
     handler: async (request, reply) => {
-       const products = await Product.find();
-       return products;
+      const products = await Product.find();
+      return products;
     },
   },
   {
@@ -19,8 +19,10 @@ const routes = [
   {
     url: "/products",
     method: "POST",
-    handler: (request, reply) => {
-      reply.send("Create Product");
+    handler:async (request, reply) => {
+      const newProduct = new Product(request.body);
+      await newProduct.save();
+      reply.code(201).send(newProduct);
     },
   },
   {
@@ -36,7 +38,7 @@ const routes = [
     handler: (request, reply) => {
       reply.send("updating a product");
     },
-  }
+  },
 ];
 
 module.exports = routes;
