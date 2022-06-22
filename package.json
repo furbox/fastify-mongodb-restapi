@@ -1,0 +1,19 @@
+{
+  "name": "fastify-mongodb-restapi",
+  "version": "1.0.0",
+  "description": "Curso de fastify con fazt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furbox/fastify-mongodb-restapi.git"
+  },
+  "author": "Fazt Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/furbox/fastify-mongodb-restapi/issues"
+  },
+  "homepage": "https://github.com/furbox/fastify-mongodb-restapi#readme"
+}
