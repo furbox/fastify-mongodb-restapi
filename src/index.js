@@ -2,7 +2,10 @@ const fastify = require("fastify")({
   logger: true,
 });
 const productRoutes = require("./routes/product.route");
+const swagger = require("./utils/swagger");
 require('./utils/mongoose');
+
+fastify.register(require("@fastify/swagger"), swagger.options)
 
 fastify.get("/", (request, reply) => {
   reply.send({ hello: "world" });
